@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Seung-Gu Lee</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel='icon' href='images/emoji.png'>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function openMenu(id)
+            {
+                var box = $('#' + id);
+                
+                box.fadeIn(200);
+            }
+            function closeMenu(id)
+            {
+                var box = $('#' + id);
+                
+                box.fadeOut(200);
+            }
+            function resumeNavigate(id)
+            {
+                var contentIds = ['r-default', 'r-bio', 'r-education', 'r-skills', 
+                    'r-awards', 'r-links', 'r-resume'];
+                
+                if(document.getElementById(id).style.display === 'block') 
+                {
+                    document.getElementById(id).style.display = 'none';
+                    document.getElementById('r-default').style.display = 'block';
+                }
+                else
+                {
+                    for(i=0; i<contentIds.length; i++)
+                    {
+                        if(contentIds[i] === id)
+                            document.getElementById(contentIds[i]).style.display = 'block';
+                        else
+                            document.getElementById(contentIds[i]).style.display = 'none';
+                    }
+                }
+                
+                    
+            }
+        </script>
+    </head>
+    <body>
+        <br/>
+        
+        <!-- BIO -->
+        
+        <!-- Bio -->
+        <div id='box-bio'>
+            <img class='img-emoji' src='images/emoji.png' alt='Emoji'>
+            <h1>Seung-Gu Lee</h1>
+            <br/>
+            <p>
+                Hi! I'm Seung-Gu. I'm a high school student at Kansas Academy of Math and Science (KAMS) at Fort Hays State University.
+                <br/><br/>
+                I'm interested in computer science and programming. I really enjoy writing code to make my imaginations come true.
+            </p>
+            <br/>
+            <button class='button-bio' onclick='openMenu("bio")'>More About Me!</button>
+        </div>
+        <br/><br/>
+        
+        <!-- ABOUT -->
+        
+        <h2>About Me</h2>
+        
+        <!-- Navigation bar -->
+        <div id="selection-nav-box">
+            
+            <a href="javascript:resumeNavigate('r-bio')">
+                <div class="nav-item">
+                    <img src='images/icons/profile_icon.png'>
+                    <span class='nav-name'>Bio</span>
+                </div>
+            </a>
+            
+            <a href="javascript:resumeNavigate('r-skills')">
+                <div class="nav-item">
+                    <img src='images/icons/skills_icon.png'>
+                    <span class='nav-name'>Skills</span>
+                </div>
+            </a>
+            
+            <a href="javascript:resumeNavigate('r-education')">
+                <div class="nav-item">
+                    <img src='images/icons/education_icon.png'>
+                    <span class='nav-name'>Academics</span>
+                </div>
+            </a>
+                
+          
+            <a href="javascript:resumeNavigate('r-links')">
+                <div class="nav-item">
+                    <img src='images/icons/link_icon.png'>
+                    <span class='nav-name'>Links</span>
+                </div>
+            </a>
+            
+            <a href="javascript:resumeNavigate('r-resume')">
+                <div class="nav-item">
+                    <img src='images/icons/file_icon.png'>
+                    <span class='nav-name'>Resume</span>
+                </div>
+            </a>
+            
+            <!--
+            <a href="javascript:resumeNavigate('r-awards')">
+                <div class="nav-item">
+                    <img src='images/icons/awards_icon.png'>
+                    <span class='nav-name'>Awards</span>
+                </div>
+            </a>
+            -->
+            <!--
+            <a href="javascript:resumeNavigate('r-default')">
+                <div class="nav-item">
+                    <img src='images/icons/repeat_icon.png'>
+                </div>
+            </a>
+            -->
+            
+        </div>
+        
+        
+        <div id="resume-box">
+            <span id='r-default'>Please select a category!</span>
+            
+            <!-- Bio -->
+            <div class='resume-content' id='r-bio'>
+                <h2>Bio</h2>
+                <p>
+                    Hi! I'm Seung-Gu Lee, and I am a junior at Kansas Academy of 
+                    Mathematics and Science (KAMS).<br/>
+                    I am interested in computer science and software engineering. 
+                    I really enjoy writing code to make my imaginations come true.
+                </p>
+                <ul>
+                    <li>Age: 17</li>
+                    <li>Languages: English, Korean</li>
+                    <li>Location: Hays, KS</li>
+                    <li>From: Seoul, S. Korea</li>
+                </ul>
+                
+                <p>
+                    I would like to welcome you to my website, and express thank you
+                    for your interest! If you have any questions, please feel free
+                    to email me at 
+                    <a href="mailto:admin@seunggulee.com" target='_blank'>admin@seunggulee.com</a>!
+
+                </p>
+            </div>
+            
+            <!-- Education -->
+            <div class='resume-content' id='r-education'>
+                <h2>Academics</h2>
+                
+                <ul>
+                    <li>Cumulative GPA: 4.0/4.0*</li>
+                    <li>SAT: 1510/1600 (first SAT!)</li>
+                    <li>SAT Subject Tests: TBD</li>
+                    <li>AP Computer Science A: TBD (May 2021)</li>
+                </ul>
+                <p class="small-text">
+                    * GPAs are unweighted. The schools I attended have different GPA systems.
+                    Please look below for GPA for each school.
+                </p><br/>
+
+                
+                
+                <h3>Schools</h3>
+                <h4>
+                    <a href='javascript:openMenu("r-content-kams")'>Kansas Academy of Math and Science</a>
+                    <span>(current)</span>
+                </h4>
+                <span>
+                    GPA: 4.0/4.0 (unweighted)
+                </span>
+                <div class='expandable-box' id='r-content-kams'>
+                    <span>
+                        Type: Early College (Dual Enrollment)<br/>
+                        Location: Hays, Kansas<br/>
+                        Link: <a href='http://fhsu.edu/kams' target='_blank'>fhsu.edu/kams</a>
+                    </span>
+                </div>
+                <h4>
+                    <a href="javascript:openMenu('r-content-vhs')">The Village School</a> 
+                    <span>(Aug. 2018 - May 2020)</span>
+                </h4>
+                <span>
+                    GPA: 100.6% (weighted) / 99.2% (unweighted) 
+                </span>
+                <div class='expandable-box' id='r-content-vhs'>
+                    <span>
+                        Type: High School<br/>
+                        Location: Houston, Texas<br/>
+                        Link: <a href='http://thevillageschool.com/' target='_blank'>thevillageschool.com</a>
+                    </span>
+                </div>
+                <p class="small-text" style="font-size:9pt;">Click on the school name to expand!</p>
+                
+                
+                <h3>Relevant Coursework</h3>
+                <ul>
+                    <li>Intro to Computer Science</li>
+                    <li>Web Applications</li>
+                    <li>Computer Science II</li>
+                    <li>Data Structures*</li>
+                    <li>Analytic Geometry and Calculus I, II*</li>
+                    <li>Intro to Graphic Design</li>
+                </ul>
+                <p class='small-text'>* Will be taking them next semester (Spring 2021)</p>
+
+            </div>
+            
+            <!-- Skills -->
+            <div class="resume-content" id="r-skills">
+                <h2>Skills</h2>
+                
+                <ul>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>HTML/JSP, CSS, JavaScript</li>
+                    <li>Servlet, MySQL</li>
+                    <li>Unity, C#</li>
+                    <li>(Currently learning: ReactJS)</li>
+                </ul>
+                
+                <h3>Web Development</h3>
+                <p>I know the fo</p>
+                
+                
+                <h3>Game Development</h3>
+                <p>
+                    I can develop video games with <b>Unity</b> and <b>C#</b>.
+                    Currently, I have released some games for Android on the Google Play store.
+                    Please <a href="#box-portfolio">scroll down to "Portfolio"</a> 
+                    to check it out!
+                </p>
+                <p>
+                    I am a qualified indie developer for the <b>Nintendo Switch</b> platform
+                    and I will be releasing my game on the Switch as well.
+                </p>
+            </div>
+            
+            <!-- Awards -->
+            <div class="resume-content" id="r-awards">
+                <h2>Awards</h2>
+                <p>TODO add content</p>
+            </div>
+            
+            <!-- Links -->
+            <div class="resume-content" id="r-links">
+                <h2>Links</h2>
+                
+                <h3>Developer Profiles</h3>
+                <ul>
+                    <li><a href='https://github.com/awesomeguy4k/' target='_blank'>
+                        Github
+                    </a></li>
+                    <li><a href='http://devpost.com/awesomeguy4k' target='_blank'>
+                        Devpost
+                    </a></li>
+                    <li><a href='https://nether-yoshi.itch.io/' target='_blank'>
+                        itch.io
+                    </a></li>
+                    <li><a href='https://play.google.com/store/apps/dev?id=7666948543367299688' target='_blank'>
+                        Google Play
+                    </a></li>
+                    <li><a href='http://netheryoshi.com/' target='_blank'>
+                        My public website (netheryoshi.com)
+                    </a></li>
+                </ul>
+                
+                <h3>Contacts</h3>
+                <ul>
+                    <li>Email: <a href="mailto:admin@seunggulee.com" target='_blank'>admin@seunggulee.com</a></li>
+                    <li>Discord: <a href='https://discord.com/' target='_blank'>NetherYoshi#8775</a></li>
+                    <li>Instagram: <a href="https://instagram.com/seunggulee_" target='_blank'>@seunggulee_</a></li>
+                </ul>
+            </div>
+            
+            <!-- Resume -->
+            <div class="resume-content" id="r-resume">
+                <h2>Resume</h2>
+                
+                <p>
+                    Please click the button below to download the PDF file of my resume.
+                </p>
+                
+                <a href='http://seunggulee.com/downloads/resume.pdf' target='_blank'>
+                    <img class='img-proj-download' alt='Download' src='images/download-plain.png'/>
+                </a>
+                
+                <p>
+                    If you have any questions, please email me at
+                    <a href="mailto:admin@seunggulee.com">admin@seunggulee.com</a>.
+                </p>
+                <p>Thank you!</p>
+            </div>
+        </div>
+        
+        
+        
+        
+        <br/><br/>
+        <!-- PORTFOLIO -->
+        
+        <!-- Showcase -->
+        
+        <div id='box-portfolio'>
+            <h2>Portfolio</h2>
+            
+            <br/>
+            
+            <!-- ClassChat -->
+            <div class='portfolio-item'>
+                <h4>ClassChat</h4>
+                <img src='images/projects/classchat_fg.png' alt='ClassChat'>
+
+                <a onclick='openMenu("p-classchat")'>
+                    <div class='hover-over'>
+                        <button onclick=''>Learn More</button>
+                    </div>
+                </a>
+
+                <p>
+                    Seamlessly communicate with anyone in your school with ClassChat's open-invitation chat service.
+                </p>
+                <p class='small'>
+                    Platform: Web (Desktop)<br/>
+                    Made with: JSP, Servlet, Java, WebSocket, MySQL, JavaScript, CSS<br/>
+                    Completed: Nov. 21-22, 2020
+                </p>
+            </div>
+            
+            <!-- Hexagon Defense -->
+            <div class='portfolio-item'>
+                <h4>Hexagon Defense</h4>
+                <img src='images/projects/hd_fg_nx.png' alt='Hexagon Defense'>
+                
+                <a onclick='openMenu("p-hd")'>
+                    <div class='hover-over'>
+                        <button onclick=''>Learn More</button>
+                    </div>
+                </a>
+                
+                <p>
+                    Hexagon Defense is an arcade defense shooter game. Rotate the hexagon and shoot the enemies!
+                </p>
+                <p class='small'>
+                    Platform: Nintendo Switch, Android<br/>
+                    Made with: Unity, C#<br/>
+                    Released: July 2020 (Android), December 2020 (Switch)
+                </p>
+            </div>
+            
+            <!-- StudyCore -->
+            <div class='portfolio-item'>
+                <h4>StudyCore™</h4>
+                <img src='images/projects/studycore_fg.png' alt='StudyCore'>
+                
+                <a onclick='openMenu("p-studycore")'>
+                    <div class='hover-over'>
+                        <button onclick=''>Learn More</button>
+                    </div>
+                </a>
+                
+                <p>
+                    StudyCore™ is an online platform for students to exchange their study materials.
+                </p>
+                <p class='small'>
+                    Platform: Web (Desktop)<br/>
+                    Made with: JSP, Servlet, MySQL<br/>
+                    Completed: May 2020
+                </p>
+            </div>
+        </div>
+        
+        <!-- Portfolio - View All Button -->
+        
+        <div class="button-view-all">
+            <button onclick="openMenu('p-portfolio')">View More</button>
+        </div>
+        
+        <!-- All Portfolio Projects -->
+        
+        <div id="p-portfolio" class="popup">
+            <a class='close-popup' onclick='closeMenu("p-portfolio");'>&times;</a>
+            
+            <div class="container-sp">
+                <h1>Portfolio</h1>
+                <br/>
+
+                <!-- ClassChat -->
+                <div class='portfolio-item'>
+                    <h4>ClassChat</h4>
+                    <img src='images/projects/classchat_fg.png' alt='ClassChat'>
+
+                    <a onclick='openMenu("p-classchat")'>
+                        <div class='hover-over'>
+                            <button onclick=''>Learn More</button>
+                        </div>
+                    </a>
+
+                    <p>
+                        Seamlessly communicate with anyone in your school with ClassChat's open-invitation chat service.
+                    </p>
+                    <p class='small'>
+                        Platform: Web (Desktop)<br/>
+                        Made with: JSP, Servlet, Java, WebSocket, MySQL, JavaScript, CSS<br/>
+                        Completed: Nov. 21-22, 2020
+                    </p>
+                </div>
+
+
+                <!-- Hexagon Defense -->
+                <div class='portfolio-item'>
+                    <h4>Hexagon Defense</h4>
+                    <img src='images/projects/hd_fg_nx.png' alt='Hexagon Defense'>
+
+                    <a onclick='openMenu("p-hd")'>
+                        <div class='hover-over'>
+                            <button onclick=''>Learn More</button>
+                        </div>
+                    </a>
+
+                    <p>
+                        Hexagon Defense is an arcade defense shooter game. Rotate the hexagon and shoot the enemies!
+                    </p>
+                    <p class='small'>
+                        Platform: Nintendo Switch, Android<br/>
+                        Made with: Unity, C#<br/>
+                        Released: July 2020 (Android), December 2020 (Switch)
+                    </p>
+                </div>
+                
+                
+                <!-- KAMS Study Log -->
+                <div class='portfolio-item'>
+                    <h4>KAMS Study Logger</h4>
+                    <img src='images/projects/studylog_fg.jpg' alt='KAMS Study Logger'>
+
+                    <a onclick='openMenu("p-studylog")'>
+                        <div class='hover-over'>
+                            <button onclick=''>Learn More</button>
+                        </div>
+                    </a>
+
+                    <p>
+                        Record your study hours with just a click.
+                        Makes tracking your study time easier.
+                    </p>
+                    <p class='small'>
+                        Platform: Web (Mobile)<br/>
+                        Made with: HTML, CSS, JavaScript<br/>
+                        Completed: August 19, 2020
+                    </p>
+                </div>
+                
+
+                <!-- StudyCore -->
+                <div class='portfolio-item'>
+                    <h4>StudyCore™</h4>
+                    <img src='images/projects/studycore_fg.png' alt='StudyCore'>
+
+                    <a onclick='openMenu("p-studycore")'>
+                        <div class='hover-over'>
+                            <button onclick=''>Learn More</button>
+                        </div>
+                    </a>
+
+                    <p>
+                        StudyCore™ is an online platform for students to exchange their study materials.
+                    </p>
+                    <p class='small'>
+                        Platform: Web (Desktop)<br/>
+                        Made with: JSP, Servlet, MySQL<br/>
+                        Completed: May 2020
+                    </p>
+                </div>
+
+                <!-- Triangle Calculator -->
+                <div class='portfolio-item'>
+                    <h4>Triangle Calculator</h4>
+                    <img src='images/projects/tricalc_fg.png' alt='Triangle Calculator'>
+
+                    <a onclick='openMenu("p-tricalc")'>
+                        <div class='hover-over'>
+                            <button onclick=''>Learn More</button>
+                        </div>
+                    </a>
+
+                    <p>
+                        Triangle Calculator is a website that calculates for the sides and angles of a triangle.
+                    </p>
+                    <p class='small'>
+                        Platform: Web (Desktop)<br/>
+                        Made with: HTML, CSS, JavaScript<br/>
+                        Completed: December 2019
+                    </p>
+                </div>
+
+                <!-- CCA Club Website -->
+                <div class='portfolio-item'>
+                    <h4>CCA Club Website</h4>
+                    <img src='images/projects/cca_fg.png' alt='Creative Collaboration Association'>
+
+                    <a onclick='openMenu("p-cca")'>
+                        <div class='hover-over'>
+                            <button onclick=''>Learn More</button>
+                        </div>
+                    </a>
+
+                    <p>
+                        This website introduces CCA club at The Village School, which I founded and led.
+                    </p>
+                    <p class='small'>
+                        Platform: Web (Desktop)<br/>
+                        Made with: HTML, CSS<br/>
+                        Completed: September 2019
+                    </p>
+                </div>
+
+                <!-- Force Calculator -->
+                <div class='portfolio-item'>
+                    <h4>Force Calculator</h4>
+                    <img src='images/projects/fc_fg.png' alt='Force Calculator'>
+
+                    <a onclick='openMenu("p-fc")'>
+                        <div class='hover-over'>
+                            <button onclick=''>Learn More</button>
+                        </div>
+                    </a>
+
+                    <p>
+                        Force Calculator can calculate for any force-related formula from high school physics.
+                    </p>
+                    <p class='small'>
+                        Platform: Java (Desktop)<br/>
+                        Made with: Java (Swing GUI)<br/>
+                        Completed: May 2019
+                    </p>
+                </div>
+
+                <!-- Vector Calculator -->
+                <div class='portfolio-item'>
+                    <h4>Vector Calculator</h4>
+                    <img src='images/projects/vector_fg.png' alt='Vector Calculator'>
+
+                    <a onclick='openMenu("p-vector")'>
+                        <div class='hover-over'>
+                            <button onclick=''>Learn More</button>
+                        </div>
+                    </a>
+
+                    <p>
+                        Vector Calculator receives each vector, adds them up, and returns a resultant vector.
+                    </p>
+                    <p class='small'>
+                        Platform: Java (Desktop)<br/>
+                        Made with: Java<br/>
+                        Completed: December 2018
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <!-- POP UPS -->
+        
+        <!-- ClassChat Pop-up -->
+        <div id='p-classchat' class='popup'>
+            <a class='close-popup' onclick='closeMenu("p-classchat");'>&times;</a>
+            
+            <div class="container">
+                <h1 style='font-family: "GmarketBold", sans-serif; color: white; background-color: #4F86C8; font-size: 20pt'>
+                    ClassChat
+                </h1>
+                <br/>
+                
+                <!--
+                <img class='img-fg-popup' src='images/projects/classchat_fg.png'>
+                -->
+                <div class="slideshow-box">
+                    <iframe class="slideshow" src="slideshows/ss-classchat.html" marginheight="0" marginwidth="0"></iframe>
+                </div>
+                
+                <p>
+                    Seamlessly communicate with anyone in your school with ClassChat's open-invitation chat service.
+                    <br/><br/>
+                    The COVID-19 pandemic forced schools worldwide to online remote
+                    learning, but this is causing some problems in students. Many
+                    are unable to ask classmates questions, find tutoring support,
+                    or make new friends. It's also not just during the COVID-19 pandemic;
+                    the lack of communication between students has been a chronic issue.
+                    <br/><br/>
+                    ClassChat allows anyone to seamlessly join any group chat within 
+                    their school. It allows better connection among the students, 
+                    provides easy access to support, and bridges the gap between students.
+                    <br/><br/>
+                    (Please 
+                    <a href="https://docs.google.com/presentation/d/1Gmg74aqaubvgd07zNHfOpGac55eSaCy9G2GbApo2T0Q/edit?usp=sharing" target="_blank">
+                        click here
+                    </a>
+                     to view our Google Slides presentation.)
+                </p>
+                <br/>
+                <br/>
+                
+                <a href='http://classchat.tech' target='_blank'>
+                    <img class='img-proj-download' alt='View On Web' src='images/view-web.png'/>
+                </a>
+                
+                <a href='https://devpost.com/software/classchat-ojbmcz' target='_blank'>
+                    <img class='img-proj-download' alt='Official Website' src='images/official-website.png'/>
+                </a>
+                <br/><br/>
+                
+                <h4 class='dev-story'>Development</h4>
+                <p class='dev-story'>
+                    This project was developed as a team for the WWPHacks2020 hackathon
+                    within the 24-hour time limit.
+                    I worked as a full-stack developer, designing the entire frontend components
+                    as well as writing most of the functioning Java Servlets for the backend.
+                    I was also the one who came up with the idea.
+                </p>
+                
+                <br/><br/>
+                <h4>Skills Acquired</h4>
+                <ul class='list-skills'>
+                    <li>Collaborating with teammates using Github</li>
+                    <li>Team management skills in programming projects</li>
+                    <li>Further experience in Servlets</li>
+                    <li>Introduction to using WebSocket</li>
+                </ul>
+                
+                <br/>
+                <p class='mini-description'>
+                    - Development: Nov. 21-22, 2020<br/>
+                    - Published: Nov. 22, 2020<br/>
+                    - Platform: Web (Desktop)<br/>
+                    - Made with: JSP, Servlet, Java, WebSocket, MySQL, JavaScript, CSS
+                </p>
+            </div>
+        </div>
+        
+        <!-- Study Log Pop-up -->
+        <div id='p-studylog' class='popup'>
+            <a class='close-popup' onclick='closeMenu("p-studylog");'>&times;</a>
+            
+            <div class="container">
+                <h1 style='font-family: "Alata", sans-serif; color: black; background-color: #FFA507; font-size: 20pt'>
+                    KAMS Study Logger
+                </h1>
+                <br/>
+                
+                <img class='img-fg-popup' src='images/projects/studylog_fg.jpg'>
+                
+                <p>
+                    Record your study hours with just a click. 
+                    <br/><br/>
+                    In KAMS, all juniors are required to log their study hours for their Research/Seminar class.
+                    However, using a paper can be inconvenient and difficult in some cases.
+                    With this simple web application, it is easier than ever.
+                    <br/><br/>
+                    (This was developed in just 3 hours.)
+                </p>
+                <br/>
+                
+                
+                <a href='http://projects.seunggulee.com/studylog' target='_blank'>
+                    <img class='img-proj-download' alt='View On Web' src='images/view-web.png'/>
+                </a>
+                
+                <br/><br/>
+                <h4>Skills Acquired</h4>
+                <ul class='list-skills'>
+                    <li>Further skills of JavaScript</li>
+                    <li>Efficient programming within a short time</li>
+                    <li>Google Ads implementation</li>
+                </ul>
+                
+                <br/>
+                <p class='mini-description'>
+                    - Development: Aug. 19, 2020 (3 hours)<br/>
+                    - Published: Aug. 19, 2020<br/>
+                    - Platform: Web (Mobile)<br/>
+                    - Made with: HTML, CSS, JavaScript
+                </p>
+            </div>
+        </div>
+        
+        <!-- Hexagon Defense Pop-up -->
+        <div id='p-hd' class='popup'>
+            <a class='close-popup' onclick='closeMenu("p-hd");'>&times;</a>
+            
+            <div class="container">
+                <h1 style='font-family: "SquaresBold", "GmarketBold", sans-serif; color: #b8f8fa; background-color: black; font-size: 20pt'>
+                    Hexagon Defense
+                </h1>
+                <br/>
+                
+                <iframe class='img-fg-popup' width="560" height="315" src="https://www.youtube.com/embed/zlMismj3exs" frameborder="0" allowfullscreen></iframe>
+                
+                <p>
+                    Hexagon Defense is an arcade defense shooter game. 
+                    Rotate the hexagon and shoot the enemies!
+                    <br/><br/>
+                    There are a variety of stages with different themes and difficulty that you can enjoy.
+                    Also, you can level-up powerful items to slaughter the enemies!
+                    <br/><br/>
+                    Survive, score high points, and put your name on the prestigious leaderboard. Download and play now!
+                </p>
+                <br/>
+                
+                <p class='emphasis'>
+                    &starf; To be released on the <b>Nintendo Switch</b> console!<br/>
+                    &starf; 800+ installs on Google Play<br/>
+                    &starf; Average rating of &star;5.0 (20+ reviews)<br/>
+                    <span style='font-size: 70%'>(As of Aug. 25, 2020)</span>
+                </p>
+                <br/>
+                
+                <!-- Download -->
+                <a href='https://nintendo.com' target='_blank'>
+                    <img class='img-proj-download' alt='Nintendo eShop' src='images/nintendo-eshop-2.png'/>
+                </a>
+                <a href='https://play.google.com/store/apps/details?id=com.NetherYoshi.HexagonDefense&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target='_blank'>
+                    <img class='img-proj-download' alt='Get it on Google Play' src='images/btn-googleplay.png'/>
+                </a>
+                <a href='http://netheryoshi.com/hexagon-defense' target='_blank'>
+                    <img class='img-proj-download' alt='Official Website' src='images/official-website.png'/>
+                </a>
+                
+                <br/><br/>
+                
+                <h4 class='dev-story'>Development</h4>
+                <p class='dev-story'>
+                    The game was first released on the Google Play store for Android
+                    on July 2020. 
+                    <br/><br/>
+                    At this point, I am trying to publish this game to the Nintendo
+                    Switch console. I have been approved as a qualified indie developer 
+                    and acquired a dev kit. The game is currently going through Lotcheck
+                    and is expected to be released on December 22, 2020.
+                </p>
+                <br/><br/>
+                
+                
+                <h4>Skills Acquired</h4>
+                <ul class='list-skills'>
+                    <li>Using the Unity Engine for game development</li>
+                    <li>Game design</li>
+                    <li>Further understanding of OOP</li>
+                    <li>User-friendly UI/UX design</li>
+                    <li>Basics of C#</li>
+                    <li>Marketing for user acquisition</li>
+                </ul>
+                
+                <br/>
+                <p class='mini-description'>
+                    - Development: Feb. 2020 - July 2020<br/>
+                    - Published: July 2020 (Android), December 2020 (Switch)<br/>
+                    - Platform: Nintendo Switch, Android<br/>
+                    - Made with: Unity, C#
+                </p>
+            </div>
+        </div>
+        
+        <!-- StudyCore Pop-up -->
+        <div id='p-studycore' class='popup'>
+            <a class='close-popup' onclick='closeMenu("p-studycore");'>&times;</a>
+            
+            <div class="container">
+                <h1 style='font-family: "GmarketBold", sans-serif; color: #68b9ce; background-color: #ebd2a4;'>
+                    StudyCore&trade;
+                </h1>
+                <br/>
+                
+                <div class="slideshow-box">
+                    <iframe class="slideshow" src="slideshows/ss-studycore.html" marginheight="0" marginwidth="0"></iframe>
+                </div>
+                
+                <p>
+                    StudyCore&trade; is an online platform for students to exchange their study materials, such as handmade study guides and worksheets.
+                    <br/><br/>
+                    In StudyCore&trade; each school have its own community. 
+                    Students can choose to access relevant study material made by other students in their school, 
+                    or they can view posts uploaded from around the world!
+                    <br/><br/>
+                    StudyCore&trade; features a unique point and rank system to encourage students to actively participate.
+                    Share more, view more, and become famous!
+                </p>
+                <br/>
+                
+                <!-- Download -->
+                <!--
+                <a href='http://projects.seunggulee.com/studycore' target='_blank'>
+                    <img class='img-proj-download' alt='View On Web' src='images/view-web.png'/>
+                </a>
+                -->
+                <a href='http://projects.seunggulee.com/download/studycore.war' target='_blank'>
+                    <img class='img-proj-download' alt='Download' src='images/download-src.png'/>
+                </a>
+                <a href='http://projects.seunggulee.com/studycore/help.html' target='_blank'>
+                    <img class='img-proj-download' alt='Official Website' src='images/official-website.png'/>
+                </a>
+                <p>
+                    * Sorry! The hosting service does not support JSP projects. You can download the WAR file instead. 
+                    (Please <a href='http://projects.seunggulee.com/studycore/help.html' target='_blank'>click here</a> to learn more about the project.)
+                </p>
+                
+                <br/><br/>
+                <h4>Skills Acquired</h4>
+                <ul class='list-skills'>
+                    <li>Basics of backend development with Servlet</li>
+                    <li>Utilizing the MVC model</li>
+                    <li>Database access and modification with MySQL</li>
+                    <li>Further skills of JSP(HTML) and CSS</li>
+                </ul>
+                
+                <br/>
+                <p class='mini-description'>
+                    - Development: Mar. 2020 - May 2020<br/>
+                    - Completed: May 2020<br/>
+                    - Platform: Web (Desktop)<br/>
+                    - Made with: JSP, Servlet, MySQL<br/>
+                    - Term project for Web Applications course (Grade received: 100/100)
+                </p>
+            </div>
+        </div>
+        
+        <!-- Triangle Calculator Pop-up -->
+        <div id='p-tricalc' class='popup'>
+            <a class='close-popup' onclick='closeMenu("p-tricalc");'>&times;</a>
+            
+            <div class="container">
+                <h1 style='font-family: "Acuta", sans-serif; color: black; background-color: #b7ddec;'>
+                    <i>Triangle Calculator</i>
+                </h1>
+                <br/>
+                
+                <img class='img-fg-popup' src='images/projects/tricalc_fg.png'>
+                
+                <p>
+                    Triangle Calculator is a website that can calculate for the remaining sides and angles of a triangle.
+                    It can also calculate for the area of a triangle.
+                    <br/><br/>
+                    The calculator utilizes various trigonometry formulas: Law of Sines, Law of Cosines, Heron's Area Formula, and Oblique Triangle Formula.
+                </p>
+                <br/>
+                
+                <!-- Download -->
+                <a href='http://projects.seunggulee.com/triangle-calculator' target='_blank'>
+                    <img class='img-proj-download' alt='View On Web' src='images/view-web.png'/>
+                </a>
+                
+                <br/><br/>
+                <h4>Skills Acquired</h4>
+                <ul class='list-skills'>
+                    <li>Basics of front-end development with HTML and CSS</li>
+                    <li>Website and UI/UX design</li>
+                    <li>Basics of JavaScript</li>
+                </ul>
+                
+                <br/>
+                <p class='mini-description'>
+                    - Development: Oct. 2020 - Dec. 2020<br/>
+                    - Completed: December 2020<br/>
+                    - Platform: Web (Desktop)<br/>
+                    - Made with: HTML, CSS, JavaScript<br/>
+                    - Term project for Web Applications course (Grade received: 100/100)
+                </p>
+            </div>
+        </div>
+        
+        <!-- CCA Pop-up -->
+        <div id='p-cca' class='popup'>
+            <a class='close-popup' onclick='closeMenu("p-cca");'>&times;</a>
+            
+            <div class="container">
+                <h1 style='font-family: "GmarketBold", sans-serif; color: #ece651; background-color: #54a8da; font-size: 16pt'>
+                    Creative Collaboration Association (CCA)
+                </h1>
+                <br/>
+                
+                <img class='img-fg-popup' src='images/projects/cca_s1.png'>
+                
+                <p>
+                    Creative Collaboration Association (CCA) is an officially recognized club of The Village School.
+                    The purpose of CCA is for the members to get out of their "comfort zones" and socialize with various students from around the world.
+                    <br/><br/>
+                    In the club, we come up with new ideas for the whole club to play. Then, we share it, and we actually play it as a club!
+                    We sometimes have community service trips to local organizations as team-bonding activities.
+                    <br/><br/>
+                    As the president (student leader) of the club, I made this website to introduce the club to students.
+                </p>
+                <br/>
+                
+                <!-- Download -->
+                <a href='http://projects.seunggulee.com/cca' target='_blank'>
+                    <img class='img-proj-download' alt='View on Web' src='images/view-web.png'/>
+                </a>
+                
+                
+                <br/><br/>
+                <h4>Skills Acquired</h4>
+                <ul class='list-skills'>
+                    <li>Basics of front-end development with HTML and CSS</li>
+                    <li>(For the club: leadership, cooperation, volunteerism, etc.)</li>
+                </ul>
+                
+                <br/>
+                <p class='mini-description'>
+                    - Development: Sept. 2019<br/>
+                    - Completed: September 2018<br/>
+                    - Platform: Web (Desktop)<br/>
+                    - Made with: HTML, CSS<br/>
+                    - Formative project for Web Applications course (Grade received: 100/100)
+                </p>
+            </div>
+        </div>
+        
+        <!-- Force Calculator Pop-up -->
+        <div id='p-fc' class='popup'>
+            <a class='close-popup' onclick='closeMenu("p-fc");'>&times;</a>
+            
+            <div class="container">
+                <h1 style='font-family: "Gilroy", sans-serif; color: white; background-color: #5964C5;'>
+                    Force Calculator
+                </h1>
+                <br/>
+                
+                <div class="slideshow-box">
+                    <iframe class="slideshow" src="slideshows/ss-fc.html" marginheight="0" marginwidth="0"></iframe>
+                </div>
+                
+                <p>
+                    Force Calculator is an application that can calculate for any force-related formula from high school physics.
+                    For each formula, users can choose any variable to get a result in.
+                    The application also features a user-friendly UI design.
+                    <br/><br/>
+                    Some formulas include: Centripetal Force, Newton's Second Law, and Hooke's Law.
+                    There are 11 force-related formulas in total.
+                    
+                </p>
+                <br/>
+                
+                <!-- Download -->
+                <a href='http://projects.seunggulee.com/download/ForceCalculator.jar' target='_blank'>
+                    <img class='img-proj-download' alt='Download Executable' src='images/download.png'/>
+                </a>
+                <a href='https://docs.google.com/document/d/1YNzHphSpTLY5cvoPanrX8fuk6YfgBiwScs070XROyow/edit?usp=sharing' target='_blank'>
+                    <img class='img-proj-download' alt='Learn More' src='images/official-website.png'/>
+                </a>
+                
+                
+                
+                <br/><br/>
+                <h4>Skills Acquired</h4>
+                <ul class='list-skills'>
+                    <li>Object Oriented Programming (OOP)</li>
+                    <li>GUI with Java Swing</li>
+                    <li>Further understanding of Java</li>
+                    <li>UI/UX design</li>
+                </ul>
+                
+                <br/>
+                <p class='mini-description'>
+                    - Development: Feb. 2019 - Apr. 2019<br/>
+                    - Completed: Apr. 2019<br/>
+                    - Platform: Java (Desktop)<br/>
+                    - Made with: Java<br/>
+                    - Term project for Intro to Computer Science course (Grade received: 100/100)
+                </p>
+            </div>
+        </div>
+        
+        <!-- Vector Calculator Pop-up -->
+        <div id='p-vector' class='popup'>
+            <a class='close-popup' onclick='closeMenu("p-vector");'>&times;</a>
+            
+            <div class="container">
+                <h1 style='font-family: "RobotoMono", sans-serif; color: white; background-color: #143b5d;'>
+                    Vector Calculator
+                </h1>
+                <br/>
+                
+                <img class='img-fg-popup' src='images/projects/vector_fg.png'>
+                
+                <p>
+                    Vector Calculator is a Java application that can add the vectors.
+                    <br/><br/>
+                    The application receives each vector in form of magnitude, direction, and angle.
+                    Then, the calculator adds them and returns the resultant vector.
+                    It has the ability to print the average and the x/y components of each component as well.
+                </p>
+                <br/>
+                
+                <!-- Download -->
+                <a href='https://onlinegdb.com/BJED04R0I' target='_blank'>
+                    <img class='img-proj-download' alt='View on Web' src='images/view-web.png'/>
+                </a>
+                <a href='https://projects.seunggulee.com/download/VectorCalculator_SupportingDocument.pdf' target='_blank'>
+                    <img class='img-proj-download' alt='Official Website' src='images/official-website.png'/>
+                </a>
+                
+                
+                <br/><br/>
+                <h4>Skills Acquired</h4>
+                <ul class='list-skills'>
+                    <li>Basics of Java: variables, conditionals, itierations, arrays, methods, etc.</li>
+                    <li>Basic knowledge of computer science</li>
+                </ul>
+                
+                <br/>
+                <p class='mini-description'>
+                    - Development: Nov. 2018 - Dec. 2018<br/>
+                    - Completed: December 2018<br/>
+                    - Platform: Java (Desktop)<br/>
+                    - Made with: Java<br/>
+                    - Term project for Intro to Computer Science course (Grade received: 100/100)
+                </p>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <!-- Footer -->
+        <div id='footer'>
+            <p>
+                Website designed and created by Seung-Gu Lee<br/>
+                Contact email: <a href='mailto:admin@seunggulee.com'>admin@seunggulee.com</a>
+            </p>
+        </div>
+        
+        <!-- bio Pop-up -->
+        <div id='bio' class='popup'>
+            <a class='close-popup' onclick='closeMenu("bio");'>&times;</a>
+            
+            <div class="container">
+                <h1 style='font-size: 24pt;'>Bio</h1>
+                <br/><br/>
+                
+                <h3>About Me</h3>
+                <br/>
+                <p>
+                    <b>Name</b><br/>
+                    Seung-Gu Lee
+                    <br/><br/>
+                    
+                    <b>Age / Gender</b><br/>
+                    17 / M
+                    <br/><br/>
+                    
+                    <b>Languages</b><br/>
+                    English, Korean
+                    <br/><br/>
+                    
+                    <b>School</b><br/>
+                    <a href='http://fhsu.edu/kams' target='_blank'>Kansas Academy of Math and Science (KAMS)</a>
+                    <br/><br/>
+                    
+                    <b>Interests</b>
+                </p>
+                
+                <ul>
+                    <li>Computer Science and Programming</li>
+                    <li>Game Development</li>
+                    <li>Programming/Science Memes</li>
+                    <li>Cute Stuff (cats, dogs, etc.)</li>
+                </ul>
+                
+                <p>
+                    <b>Languages/Tools</b>
+                </p>
+                <ul>
+                    <li>General: Java, C++</li>
+                    <li>Frontend: HTML, JSP, CSS, JavaScript</li>
+                    <li>Backend: Servlet, MySQL</li>
+                    <li>Game Development: Unity, C#</li>
+                    
+                </ul>
+                
+                <hr/>
+                
+                <br/>
+                
+                <h3>Education</h3>
+                <br/>
+                <p>
+                    <b>Schools</b><br/>
+                    - <span title='Early College Program for prospective STEM students at Fort Hays State University. (fhsu.edu/kams)'>
+                        Kansas Academy of Math and Science <span style='font-size: 80%;'>(current)</span>
+                    </span> <br/>
+                    <span title='STEM-specialized private high school in Houston, TX (thevillageschool.com)'>
+                        - The Village High School <span style='font-size: 80%;'>(Aug '18 - May '20)</span>
+                    </span>
+                    <br/><br/>
+                    
+                    <b>Relevant Coursework</b><br/>
+                    - Computer Science II<br/>
+                    - Web Applications<br/>
+                    - Intro to Computer Science <span style='font-size: 80%;'>(Design Tech I)</span><br/>
+                    - Intro to Graphic Design
+                    <br/><br/>
+                    
+                </p>
+                
+                <hr/>
+                <br/>
+                
+                
+                <h3>Websites/Contacts</h3>
+                <br/>
+                <p>
+                    <b>Websites</b><br/>
+                    - <a href='http://netheryoshi.com' target='_blank'>My commercial website (netheryoshi.com)</a><br/>
+                    - <a href='https://play.google.com/store/apps/dev?id=7666948543367299688' target='_blank'>My developer profile on Google Play</a>
+                    <br/><br/>
+                    
+                    <b>Social Media</b><br/>
+                    - Instagram: <a href='https://instagram.com/seunggulee_' target='_blank'>@seunggulee_</a><br/>
+                    - Discord: <a href='https://discord.com' target='_blank'>NetherYoshi#8775</a><br/>
+                    - Snapchat: <a href='https://www.snapchat.com/add/awesomeguy4k' target='_blank'>awesomeguy4k</a>
+                    <br/><br/>
+                    
+                    <b>Contact Email</b><br/>
+                    <a href='mailto:admin@seunggulee.com'>admin@seunggulee.com</a>
+                    <br/><br/>
+                    
+                    <span class='tiny'>* Last updated November 22, 2020 (UTC-5)</span>
+                </p>
+            </div>
+        </div>
+        
+        <!-- Detect mobile -->
+        <script>
+            function detectMobileDevice()
+            {
+                /*
+                if(typeof window.orientation !== 'undefined') {
+                    var slideshows = document.getElementsByClassName("slideshow-box");
+                    
+                    for(i=0; i<slideshows.length; i++) {
+                        slideshows[i].style.height = '285px';
+                    }
+                }*/
+                if(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+                {
+                    var slideshows = document.getElementsByClassName("slideshow-box");
+                    
+                    for(i=0; i<slideshows.length; i++) {
+                        slideshows[i].style.height = '285px';
+                    }
+                }
+            }
+            function isMobile() 
+            {
+                let check = false;
+                (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+                return check;
+            }
+            
+            
+            detectMobileDevice();
+        </script>
+        
+    </body>
+</html>
